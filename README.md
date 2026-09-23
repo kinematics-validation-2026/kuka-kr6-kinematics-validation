@@ -4,7 +4,7 @@ This repository contains the independent Python/NumPy cross-validation scripts a
 
 ## 🎥 System Demonstration
 Watch the real-time HIL simulation, custom ESP32 controller integration, and trajectory planning in action:
-👉 **[Click here to watch the YouTube Demo](https://youtu.be/DMkxsRL54ZQ)**
+👉 **[Click here to watch the YouTube Demo](https://www.youtube.com/watch?v=gN7_8EE3btU)**
 
 ## 📂 Repository Contents
 * `cross_validation.py`
