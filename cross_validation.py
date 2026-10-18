@@ -36,7 +36,7 @@ def run_validation_test(test_name, dh_params):
 # CROSS-VALIDATION TEST SCENARIOS
 # ---------------------------------------------------------
 
-# Test 1: Home Position (All angles 0)
+## Test 1: Home Position
 dh_params_test1 = [
     [0.0, 0.400, 0.025, -90],
     [0.0, 0.000, 0.455,   0],
@@ -48,16 +48,16 @@ dh_params_test1 = [
 run_validation_test("Test 1: Home Position", dh_params_test1)
 
 
-# Test 2: Arbitrary Configuration
+# Test 2: Base Rotation
 dh_params_test2 = [
-    [45.0,  0.400, 0.025, -90],
-    [-30.0, 0.000, 0.455,   0],
-    [60.0,  0.000, 0.035, -90],
-    [90.0,  0.420, 0.000,  90],
-    [0.0,   0.000, 0.000, -90],
-    [-45.0, 0.080, 0.000,   0]
+    [90.0, 0.400, 0.025, -90],
+    [0.0,  0.000, 0.455,   0],
+    [0.0,  0.000, 0.035, -90],
+    [0.0,  0.420, 0.000,  90],
+    [0.0,  0.000, 0.000, -90],
+    [0.0,  0.080, 0.000,   0]
 ]
-run_validation_test("Test 2: Arbitrary Configuration", dh_params_test2)
+run_validation_test("Test 2: Base Rotation", dh_params_test2)
 
 
 # Test 3: Asymmetric Wrist
@@ -72,13 +72,84 @@ dh_params_test3 = [
 run_validation_test("Test 3: Asymmetric Wrist", dh_params_test3)
 
 
-# Test 4: Base Isolation
+# Test 4: Round-Trip
 dh_params_test4 = [
-    [90.0, 0.400, 0.025, -90],
-    [0.0,  0.000, 0.455,   0],
-    [0.0,  0.000, 0.035, -90],
-    [0.0,  0.420, 0.000,  90],
-    [0.0,  0.000, 0.000, -90],
-    [0.0,  0.080, 0.000,   0]
+    [30.0,  0.400, 0.025, -90],
+    [30.0,  0.000, 0.455,   0],
+    [-30.0, 0.000, 0.035, -90],
+    [45.0,  0.420, 0.000,  90],
+    [40.0,  0.000, 0.000, -90],
+    [45.0,  0.080, 0.000,   0]
 ]
-run_validation_test("Test 4: Base Isolation", dh_params_test4)
+run_validation_test("Test 4: Round-Trip", dh_params_test4)
+
+# Test 5: General Workspace Pose 1
+dh_params_test5 = [
+    [12.0,  0.400, 0.025, -90],
+    [-25.0, 0.000, 0.455,   0],
+    [55.0,  0.000, 0.035, -90],
+    [110.0, 0.420, 0.000,  90],
+    [-35.0, 0.000, 0.000, -90],
+    [42.0,  0.080, 0.000,   0]
+]
+run_validation_test("Test 5: General Workspace Pose 1", dh_params_test5)
+
+
+# Test 6: General Workspace Pose 2
+dh_params_test6 = [
+    [-78.0, 0.400, 0.025, -90],
+    [14.0,  0.000, 0.455,   0],
+    [-40.0, 0.000, 0.035, -90],
+    [-65.0, 0.420, 0.000,  90],
+    [80.0,  0.000, 0.000, -90],
+    [-15.0, 0.080, 0.000,   0]
+]
+run_validation_test("Test 6: General Workspace Pose 2", dh_params_test6)
+
+
+# Test 7: General Workspace Pose 3
+dh_params_test7 = [
+    [105.0, 0.400, 0.025, -90],
+    [-50.0, 0.000, 0.455,   0],
+    [25.0,  0.000, 0.035, -90],
+    [140.0, 0.420, 0.000,  90],
+    [-10.0, 0.000, 0.000, -90],
+    [175.0, 0.080, 0.000,   0]
+]
+run_validation_test("Test 7: General Workspace Pose 3", dh_params_test7)
+
+
+# Test 8: General Workspace Pose 4
+dh_params_test8 = [
+    [-33.0, 0.400, 0.025, -90],
+    [5.0,   0.000, 0.455,   0],
+    [88.0,  0.000, 0.035, -90],
+    [-15.0, 0.420, 0.000,  90],
+    [62.0,  0.000, 0.000, -90],
+    [-112.0, 0.080, 0.000,  0]
+]
+run_validation_test("Test 8: General Workspace Pose 4", dh_params_test8)
+
+
+# Test 9: General Workspace Pose 5
+dh_params_test9 = [
+    [54.0,  0.400, 0.025, -90],
+    [-75.0, 0.000, 0.455,   0],
+    [-18.0, 0.000, 0.035, -90],
+    [95.0,  0.420, 0.000,  90],
+    [-48.0, 0.000, 0.000, -90],
+    [60.0,  0.080, 0.000,   0]
+]
+run_validation_test("Test 9: General Workspace Pose 5", dh_params_test9)
+
+
+# Test 10: General Workspace Pose 6
+dh_params_test10 = [
+    [-145.0, 0.400, 0.025, -90],
+    [28.0,   0.000, 0.455,   0],
+    [10.0,   0.000, 0.035, -90],
+    [-120.0, 0.420, 0.000,  90],
+    [22.0,   0.000, 0.000, -90],
+    [-85.0,  0.080, 0.000,   0]
+]
+run_validation_test("Test 10: General Workspace Pose 6", dh_params_test10)
